@@ -1,0 +1,82 @@
+name: Bug Report
+description: Report unexpected or incorrect behavior.
+title: '[Bug]: '
+labels: ['bug', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a bug. Please fill in all sections.
+        For security vulnerabilities, do NOT use this form — see [SECURITY.md](../../SECURITY.md).
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is the unexpected behavior?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce this bug?
+      placeholder: |
+        1. Run `pnpm ...`
+        2. Navigate to ...
+        3. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened? Paste error messages and stack traces here.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Web application (apps/web)
+        - API (apps/api)
+        - SDK (packages/sdk)
+        - Types (packages/types)
+        - Validation (packages/validation)
+        - Config (packages/config)
+        - Contract (contracts/)
+        - Documentation
+        - CI / tooling
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: node-version
+    attributes:
+      label: Node.js version
+      placeholder: '24.x.x'
+
+  - type: input
+    id: pnpm-version
+    attributes:
+      label: pnpm version
+      placeholder: '12.x.x'
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context
+      description: Anything else that might help diagnose this bug.

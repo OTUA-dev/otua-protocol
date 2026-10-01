@@ -1,0 +1,18 @@
+# .cargo/config.toml — Cargo configuration for the OTUA Protocol workspace.
+#
+# Windows linker note:
+# The default MSVC target (x86_64-pc-windows-msvc) requires the Windows SDK
+# libraries (kernel32.lib etc.) to be installed. Install via:
+#   "Build Tools for Visual Studio" -> "Desktop development with C++"
+#
+# Alternatively, use the GNU toolchain by setting the default target:
+#   rustup default stable-x86_64-pc-windows-gnu
+# This requires MinGW/GCC to be installed (e.g. via winget, scoop, or MSYS2):
+#   winget install GnuWin32.Make  # or install MSYS2 from https://www.msys2.org
+#
+# CI (Linux): `cargo test` runs normally — no special configuration needed.
+
+[build]
+# Uncomment and adjust if you need to override the default linker on Windows:
+# [target.x86_64-pc-windows-msvc]
+# linker = "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\link.exe"

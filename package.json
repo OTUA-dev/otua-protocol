@@ -1,0 +1,33 @@
+{
+  "name": "otua-protocol",
+  "version": "0.1.0-foundation",
+  "private": true,
+  "type": "module",
+  "description": "OTUA Protocol — open-source collective bulk-purchasing protocol and reference implementation on Stellar.",
+  "license": "Apache-2.0",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=12.0.0"
+  },
+  "packageManager": "pnpm@12.6.0",
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "test:watch": "turbo run test:watch --parallel",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "pnpm run format:check && pnpm run lint && pnpm run typecheck && pnpm run test"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "8.35.1",
+    "@typescript-eslint/parser": "8.35.1",
+    "eslint": "9.30.1",
+    "prettier": "3.5.3",
+    "turbo": "2.5.4",
+    "typescript": "5.8.3",
+    "vitest": "3.2.4"
+  }
+}

@@ -1,0 +1,36 @@
+name: Security Issue Guidance
+description: Guidance for reporting security vulnerabilities — NOT for submitting them publicly.
+title: '[Security]: '
+labels: ['security']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ⚠️ Do not use this form to report security vulnerabilities
+
+        Security vulnerabilities must be reported **privately** to avoid putting users at risk.
+
+        **How to report a vulnerability:**
+
+        1. Go to the **Security** tab of this repository.
+        2. Click **Advisories** → **Report a vulnerability**.
+        3. Fill in the private advisory form.
+
+        This keeps your report confidential until a fix is released.
+
+        See [SECURITY.md](../../SECURITY.md) for the full security policy.
+
+        ---
+
+        **Only use this public form for:**
+        - Questions about the security policy
+        - Suggestions for improving the security documentation
+        - Non-sensitive security process questions
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Security policy question or suggestion
+      description: Describe your non-sensitive security question or documentation suggestion.
+    validations:
+      required: true

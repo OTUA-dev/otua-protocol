@@ -1,0 +1,67 @@
+name: Protocol / Design Proposal
+description: Propose a change to the OTUA Protocol specification or architecture.
+title: '[Protocol]: '
+labels: ['protocol', 'design', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Protocol changes are significant decisions. They require discussion, specification, and consensus before implementation.
+        Read [PROTOCOL_SPEC.md](../../PROTOCOL_SPEC.md) and [docs/decisions/](../../docs/decisions/) before submitting.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What is the current state of the protocol that this proposal addresses?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What change to the protocol are you proposing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this change necessary or beneficial?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches were evaluated?
+    validations:
+      required: true
+
+  - type: textarea
+    id: security
+    attributes:
+      label: Security implications
+      description: Does this change affect financial flows, escrow logic, authorization, or settlement? Describe the security implications.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: adr_needed
+    attributes:
+      label: Does this require an ADR?
+      options:
+        - 'Yes — I will create an ADR'
+        - 'Yes — I need help creating an ADR'
+        - 'No — this is a minor clarification'
+    validations:
+      required: true
+
+  - type: textarea
+    id: spec_sections
+    attributes:
+      label: Affected specification sections
+      description: Which sections of PROTOCOL_SPEC.md or docs/ would be updated?

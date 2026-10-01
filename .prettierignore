@@ -1,0 +1,30 @@
+# Prettier ignore — files/directories Prettier should not format.
+
+# Generated lockfiles
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+
+# Rust build artifacts
+target/
+contracts/**/target/
+
+# Next.js output
+.next/
+out/
+
+# Build artifacts
+dist/
+build/
+
+# Coverage
+coverage/
+
+# Turbo cache
+.turbo/
+
+# Generated type declarations
+*.d.ts
+
+# Markdown in docs that contains external syntax not compatible with Prettier
+# (none yet — add here if needed)

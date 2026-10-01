@@ -1,0 +1,31 @@
+{
+  "name": "@otua/sdk",
+  "version": "0.1.0-foundation",
+  "description": "OTUA Protocol SDK — client library for interacting with the OTUA Protocol.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "lint": "eslint --config ../../eslint.config.js src",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@otua/types": "workspace:*",
+    "@otua/validation": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "5.8.3",
+    "vitest": "3.2.4"
+  }
+}

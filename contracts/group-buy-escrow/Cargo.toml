@@ -1,0 +1,37 @@
+[package]
+name = "group-buy-escrow"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "OTUA Protocol — group-buy escrow contract skeleton (foundation phase, not production-ready)."
+publish = false
+
+[lib]
+# Foundation phase: standard lib crate type.
+# Will become ["cdylib"] when the Soroban SDK is introduced in Phase 3
+# and the contract is compiled to WASM.
+crate-type = ["lib"]
+doctest = false
+
+# ----------------------------------------------------------------------------
+# Dependencies
+#
+# Foundation phase: no Soroban SDK dependency is added yet.
+#
+# The Soroban SDK version will be pinned here when the contract layer is
+# implemented in a future phase. The correct SDK version depends on the
+# target Stellar network protocol version at that time.
+#
+# Do not add soroban-sdk until:
+#   1. The escrow mechanism has been selected (see ADR-002).
+#   2. The protocol specification defines the contract interface.
+#   3. A compatible toolchain and SDK version have been verified.
+#
+# See: docs/decisions/ADR-002-escrow-model.md
+# ----------------------------------------------------------------------------
+[dependencies]
+
+[dev-dependencies]
+
+[features]
+testutils = []

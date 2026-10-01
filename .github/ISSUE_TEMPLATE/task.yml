@@ -1,0 +1,54 @@
+name: Task
+description: A concrete implementation task linked to a specification.
+title: '[Task]: '
+labels: ['task']
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What needs to be done?
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance criteria
+      description: How will we know this task is complete? List specific, verifiable criteria.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+        - [ ] pnpm check passes
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component
+      options:
+        - Web application (apps/web)
+        - API (apps/api)
+        - SDK (packages/sdk)
+        - Types (packages/types)
+        - Validation (packages/validation)
+        - Config (packages/config)
+        - Contract (contracts/)
+        - Documentation
+        - CI / tooling
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: spec_reference
+    attributes:
+      label: Specification reference
+      description: Link to the specification section or ADR that defines this work.
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Implementation notes
+      description: Any notes or constraints for the implementer.

@@ -1,0 +1,55 @@
+name: Feature Request
+description: Propose a new feature or enhancement.
+title: '[Feature]: '
+labels: ['enhancement', 'needs-triage']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before proposing a feature, check that it is within the current project scope.
+        Protocol design changes require the Protocol / Design Proposal template instead.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or motivation
+      description: What problem does this feature solve? Why is it needed?
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed solution
+      description: What should the feature do? How should it work?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Affected component
+      options:
+        - Web application (apps/web)
+        - API (apps/api)
+        - SDK (packages/sdk)
+        - Types (packages/types)
+        - Validation (packages/validation)
+        - Config (packages/config)
+        - Contract (contracts/)
+        - Documentation
+        - CI / tooling
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What other approaches did you consider?
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional context

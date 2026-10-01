@@ -1,0 +1,40 @@
+name: Documentation Issue
+description: Report missing, incorrect, or unclear documentation.
+title: '[Docs]: '
+labels: ['documentation']
+body:
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Missing documentation
+        - Incorrect documentation
+        - Unclear documentation
+        - Outdated documentation
+        - Typo or formatting
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: File or section
+      description: Which file or section has the problem?
+      placeholder: 'docs/protocol/lifecycle.md, section: Transitions'
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What is wrong or missing?
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested improvement
+      description: How should the documentation be improved?

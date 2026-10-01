@@ -1,0 +1,15 @@
+# pnpm Workspaces — OTUA Protocol monorepo
+# https://pnpm.io/workspaces
+#
+# The workspace includes TypeScript application packages and shared packages.
+# The Rust contract layer (contracts/) and the indexer are intentionally
+# separate ecosystems and are NOT pnpm workspace packages.
+
+packages:
+  - 'apps/*'
+  - 'packages/*'
+allowBuilds:
+  '@nestjs/core': true
+  esbuild: true
+  sharp: true
+  unrs-resolver: true

@@ -1,0 +1,35 @@
+# CODEOWNERS — OTUA Protocol
+#
+# This file defines who is automatically requested for review when a PR
+# changes files in certain paths.
+#
+# Format: <pattern> <owner1> <owner2> ...
+# Owners are GitHub usernames or teams (@org/team-name).
+#
+# IMPORTANT: This file contains placeholder entries.
+# Replace @OWNER-PLACEHOLDER with the actual GitHub username(s) of the
+# repository maintainers before merging security-sensitive code.
+# See DEVELOPERS.md for instructions on updating CODEOWNERS.
+#
+# Reference: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owner for everything not matched by a more specific rule.
+*                                   @OWNER-PLACEHOLDER
+
+# Contract code — requires security-aware review.
+contracts/                          @OWNER-PLACEHOLDER
+
+# Protocol specification — requires protocol design review.
+PROTOCOL_SPEC.md                    @OWNER-PLACEHOLDER
+docs/protocol/                      @OWNER-PLACEHOLDER
+docs/decisions/                     @OWNER-PLACEHOLDER
+
+# Security policy and threat model.
+SECURITY.md                         @OWNER-PLACEHOLDER
+docs/security/                      @OWNER-PLACEHOLDER
+
+# CI and GitHub configuration.
+.github/                            @OWNER-PLACEHOLDER
+
+# Shared package APIs.
+packages/                           @OWNER-PLACEHOLDER

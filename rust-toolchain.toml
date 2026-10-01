@@ -1,0 +1,18 @@
+# rust-toolchain.toml
+# Pins the Rust toolchain for reproducible contract builds.
+#
+# Detected installed toolchain: stable-x86_64-pc-windows-msvc (Rust 1.98.0)
+#
+# The Soroban SDK has specific toolchain requirements. This file will be
+# updated when the Soroban SDK version is formally selected in Phase 3.
+# For now, the current stable toolchain is pinned for reproducibility.
+#
+# See: https://rust-lang.github.io/rustup/overrides.html#the-toolchain-file
+
+[toolchain]
+# Pinned to the exact stable version detected in this environment.
+# Update this when a new Soroban-compatible toolchain is formally selected.
+# Current installed: Rust 1.98.1 (stable-x86_64-pc-windows-msvc)
+channel = "stable"
+targets = ["wasm32-unknown-unknown"]
+components = ["rustfmt", "clippy"]
